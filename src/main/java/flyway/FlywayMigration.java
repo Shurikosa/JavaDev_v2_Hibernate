@@ -1,6 +1,7 @@
 package flyway;
 
-import org.apache.log4j.Logger;
+
+
 import org.flywaydb.core.Flyway;
 
 public class FlywayMigration {
@@ -9,12 +10,12 @@ public class FlywayMigration {
     private FlywayMigration(){
     }
     public static void migrateDatabase(){
-       // LOG.info("Flyway migration execute");
+      // log.info("Flyway migration execute");
         Flyway.configure()
                 .dataSource(Config.JDBCURL, Config.USERNAME, Config.PASSWORD)
                 .locations("classpath:flyway/scripts")
                 .load()
                 .migrate();
-       // LOG.info("Flyway migration complete");
+      // log.info("Flyway migration complete");
     }
 }
