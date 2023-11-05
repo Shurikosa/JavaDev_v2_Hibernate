@@ -9,29 +9,29 @@ import utils.HibernateUtil;
 public class ClientRepository {
     private SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
-    public void save(Client client){
+    public void persist(Client client){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.save(client);
+            session.persist(client);
             tx.commit();
         }
     }
-    public Client findById(Long id){
+    public Client getById(Long id){
         try(Session session = sessionFactory.openSession()){
             return session.get(Client.class, id);
         }
     }
-    public void update(Client client){
+    public void merge(Client client){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.update(client);
+            session.merge(client);
             tx.commit();
         }
     }
-    public void delete(Client client){
+    public void remove(Client client){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.delete(client);
+            session.remove(client);
             tx.commit();
         }
     }

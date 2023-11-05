@@ -9,29 +9,29 @@ import utils.HibernateUtil;
 public class PlanetRepository {
     private SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
-    public void save(Planet planet){
+    public void persist(Planet planet){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.save(planet);
+            session.persist(planet);
             tx.commit();
         }
     }
-    public Planet findById(Long id){
+    public Planet getById(Long id){
         try(Session session = sessionFactory.openSession()){
             return session.get(Planet.class, id);
         }
     }
-    public void update(Planet planet){
+    public void merge(Planet planet){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.update(planet);
+            session.merge(planet);
             tx.commit();
         }
     }
-    public void delete(Planet planet){
+    public void remove(Planet planet){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.delete(planet);
+            session.remove(planet);
             tx.commit();
         }
     }
