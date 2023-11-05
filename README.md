@@ -46,3 +46,4 @@ Task #4 - upload the code to Github
 Upload the code to the Github repository. Make sure that the .gitignore file is configured correctly and that only the necessary files are in the repository.
 
 The result of the SLA is a link to the repository.
+![img.png](img.png)
