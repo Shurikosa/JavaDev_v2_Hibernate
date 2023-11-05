@@ -1,37 +1,37 @@
 package repositories;
 
-import entities.Client;
+import entities.Planet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import utils.HibernateUtil;
 
-public class ClientRepository {
+public class PlanetRepository {
     private SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
-    public void save(Client client){
+    public void save(Planet planet){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.save(client);
+            session.save(planet);
             tx.commit();
         }
     }
-    public Client findById(Long id){
+    public Planet findById(Long id){
         try(Session session = sessionFactory.openSession()){
-            return session.get(Client.class, id);
+            return session.get(Planet.class, id);
         }
     }
-    public void update(Client client){
+    public void update(Planet planet){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.update(client);
+            session.update(planet);
             tx.commit();
         }
     }
-    public void delete(Client client){
+    public void delete(Planet planet){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.delete(client);
+            session.delete(planet);
             tx.commit();
         }
     }
