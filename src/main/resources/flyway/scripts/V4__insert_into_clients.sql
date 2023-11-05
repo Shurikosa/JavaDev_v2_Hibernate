@@ -1,4 +1,4 @@
-INSERT INTO travels.clients (name)
+INSERT INTO clients (name)
 VALUES ('John Smith'),
        ('Alice Johnson'),
        ('Bob Williams'),

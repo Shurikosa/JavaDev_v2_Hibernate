@@ -1,4 +1,4 @@
-CREATE TABLE travels.clients (
+CREATE TABLE clients (
     id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(200) NOT NULL CHECK (LENGTH(name) BETWEEN 3 AND 200)
 );
