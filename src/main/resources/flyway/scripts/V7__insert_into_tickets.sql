@@ -1,4 +1,4 @@
-INSERT INTO Ticket (client_id, from_planet_id, to_planet_id) VALUES
+INSERT INTO travels.tickets (client_id, from_planet_id, to_planet_id) VALUES
     (1, 'MARS', 'EARTH'),
     (2, 'VENUS', 'JUPITER'),
     (3, 'EARTH', 'SATURN'),

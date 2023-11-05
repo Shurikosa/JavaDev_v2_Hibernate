@@ -15,8 +15,7 @@
         <flyway_version>9.22.3</flyway_version>
         <log4j_logging_version>2.21.1</log4j_logging_version>
         <log4j_version>1.2.17</log4j_version>
-        <hibernate_version>6.3.0.Final</hibernate_version>
-        <postgresql_version>42.6.0</postgresql_version>
+        <hibernate_version>6.3.1.Final</hibernate_version>
         <h2_version>2.2.224</h2_version>
         <lombok_version>1.18.30</lombok_version>
     </properties>
@@ -40,18 +39,11 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate_version}</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql_version}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>${h2_version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -59,8 +51,6 @@
             <version>${lombok_version}</version>
             <scope>provided</scope>
         </dependency>
-
-
     </dependencies>
 
 </project>

@@ -1,4 +1,4 @@
-INSERT INTO Planet (id, name) VALUES
+INSERT INTO travels.planets (id, name) VALUES
     ('MARS', 'Марс'),
     ('VENUS', 'Венера'),
     ('EARTH', 'Земля'),
