@@ -9,7 +9,7 @@ public class PlanetService {
     public void savePlanet(Planet plaent) {
         plaentRepository.persist(plaent);
     }
-    public Planet findPlanetById(Long id) {
+    public Planet findPlanetById(String id) {
         return plaentRepository.getById(id);
     }
     public void mergePlanet(Planet plaent) {

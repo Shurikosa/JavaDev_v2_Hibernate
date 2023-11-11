@@ -1,37 +1,37 @@
 package repositories;
 
-import entities.Planet;
+import entities.Ticket;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import utils.HibernateUtil;
 
-public class PlanetRepository {
+public class TicketRepository {
     private SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
-    public void persist(Planet planet){
+    public void persist(Ticket ticket){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.persist(planet);
+            session.persist(ticket);
             tx.commit();
         }
     }
-    public Planet getById(String id){
+    public Ticket getById(Long id){
         try(Session session = sessionFactory.openSession()){
-            return session.get(Planet.class, id);
+            return session.get(Ticket.class, id);
         }
     }
-    public void merge(Planet planet){
+    public void merge(Ticket ticket){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.merge(planet);
+            session.merge(ticket);
             tx.commit();
         }
     }
-    public void remove(Planet planet){
+    public void remove(Ticket ticket){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            session.remove(planet);
+            session.remove(ticket);
             tx.commit();
         }
     }

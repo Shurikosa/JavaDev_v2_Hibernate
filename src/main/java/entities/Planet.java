@@ -3,17 +3,17 @@ package entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table(name = "planets")
 public class Planet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", length = 50, unique = true, nullable = false)
+    @Column(name = "id")
     private String id;
 
-    @Column(name = "planets",length = 500,nullable = false)
+    @Column(name = "planets")
     private String planet;
-
-
 }
