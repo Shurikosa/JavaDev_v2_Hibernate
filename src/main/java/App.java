@@ -21,30 +21,30 @@ public class App {
         /*
         create new Client
          */
-//        Client newClient = new Client();
-//        newClient.setName("Oleksandr Osaula");
-//        Client newClient2 = new Client();
-//        newClient2.setName("Some Client");
-//        clientService.persistClient(newClient);
-//        clientService.persistClient(newClient2);
-//
-//        /*read and print Client by id
-//         */
-//       Client client = clientService.findClientById(13L);
-//       System.out.println("Found Client: " + client.getName());
-//        Client client11 = clientService.findClientById(11L);
-//        System.out.println("Found Client: " + client11.getName());
-//        Client client12 = clientService.findClientById(12L);
-//        System.out.println("Found Client: " + client12.getName());
-//        /*
-//        update Client
-//         */
-//        client.setName("Some Dude");
-//        clientService.mergeClient(client);
-//        /*
-//        delete Client
-//         */
-//        clientService.removeClient(client);
+        Client newClient = new Client();
+        newClient.setName("Oleksandr Osaula");
+        Client newClient2 = new Client();
+        newClient2.setName("Some Client");
+        clientService.persistClient(newClient);
+        clientService.persistClient(newClient2);
+
+        /*read and print Client by id
+         */
+       Client client = clientService.findClientById(13L);
+       System.out.println("Found Client: " + client.getName());
+        Client client11 = clientService.findClientById(11L);
+        System.out.println("Found Client: " + client11.getName());
+        Client client12 = clientService.findClientById(12L);
+        System.out.println("Found Client: " + client12.getName());
+        /*
+        update Client
+         */
+        client.setName("Some Dude");
+        clientService.mergeClient(client);
+        /*
+        delete Client
+         */
+        clientService.removeClient(client);
 
         /*  work with Ticket
 

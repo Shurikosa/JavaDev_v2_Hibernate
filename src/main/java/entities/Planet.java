@@ -3,8 +3,6 @@ package entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.List;
-
 @Entity
 @Data
 @Table(name = "planets")
@@ -15,5 +13,5 @@ public class Planet {
     private String id;
 
     @Column(name = "planets")
-    private String planet;
+    private String planetName;
 }
